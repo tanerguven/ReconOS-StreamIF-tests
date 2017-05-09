@@ -9,7 +9,7 @@
 
 or modify ReconOS devicetree.dts to memory configuration:
 
-    ps7_ddr_0: memory@0 {
+	ps7_ddr_0: memory@0 {
 		device_type = "memory";
 		reg = <0x0 0x10000000>;
 	} ;
@@ -26,13 +26,13 @@ or modify ReconOS devicetree.dts to memory configuration:
 
 4. generate bitstream
 
-   cd ro_and_wo_performance/streamif
+   cd performance_test/streamif
    xps -nw system
    run bits
 
    streamif test bitstream : performance_test/streamif/implementation/system.bit
 
-   cd ro_and_wo_performance/memif
+   cd performance_test/memif
    xps -nw system
    run bits
 
@@ -50,4 +50,4 @@ or modify ReconOS devicetree.dts to memory configuration:
    streamif ro test : performance_test.x HWT_COUNT streamif-r BLOCK_SIZE TEST_REPEAT_COUNT
    streamif wo test : performance_test.x HWT_COUNT streamif-w BLOCK_SIZE TEST_REPEAT_COUNT
 
-   4 MB test example:  ./performance_test.x 8 memif 4096K 1
+   4 MB test example:  ./performance_test.x 8 streamif 4096K 1
