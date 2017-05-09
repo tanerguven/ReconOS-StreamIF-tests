@@ -1,0 +1,53 @@
+
+
+## Running Tests ##
+
+1. Install ReconOS according to tutorial (http://www.reconos.de/gettingstarted/tutorial/)
+(tested version : https://raw.githubusercontent.com/ReconOS/reconos.github.io/6c919c1df1bc20fa0b8ad3417421b3a50ab78b11/gettingstarted/tutorial/index.md)
+
+2. modify test_devicetree.dts according to tutorial
+
+or modify ReconOS devicetree.dts to memory configuration:
+
+    ps7_ddr_0: memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x10000000>;
+	} ;
+	ps7_ddr_1: memory@1 {
+		device_type = "memory";
+		reg = <0x18000000 0x8000000>;
+	} ;
+
+
+3. compile test_code
+
+   cd test_code;
+   make
+
+4. generate bitstream
+
+   cd ro_and_wo_performance/streamif
+   xps -nw system
+   run bits
+
+   streamif test bitstream : performance_test/streamif/implementation/system.bit
+
+   cd ro_and_wo_performance/memif
+   xps -nw system
+   run bits
+
+   memif test bitstream : performance_test/memif/implementation/system.bit
+
+5. run ReconOS and use streamif or memif test bitstream (according to tutorial)
+
+6. run performance test
+
+   memif rw test : performance_test.x HWT_COUNT memif BLOCK_SIZE TEST_REPEAT_COUNT
+   memif ro test : performance_test.x HWT_COUNT memif-r BLOCK_SIZE TEST_REPEAT_COUNT
+   memif wo test : performance_test.x HWT_COUNT memif-w BLOCK_SIZE TEST_REPEAT_COUNT
+
+   streamif rw test : performance_test.x HWT_COUNT streamif BLOCK_SIZE TEST_REPEAT_COUNT
+   streamif ro test : performance_test.x HWT_COUNT streamif-r BLOCK_SIZE TEST_REPEAT_COUNT
+   streamif wo test : performance_test.x HWT_COUNT streamif-w BLOCK_SIZE TEST_REPEAT_COUNT
+
+   4 MB test example:  ./performance_test.x 8 memif 4096K 1

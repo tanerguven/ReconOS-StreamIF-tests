@@ -1,0 +1,150 @@
+./performance_test.x 1 memif-w 4096K 2
+writeonly test
+memif test
+block size: 4096 kb
+test count: 2
+Creating 1 hw-threads:  0
+[malloc_page_aligned] b5b27000 - b5f27000
+[malloc_page_aligned] b5725000 - b5b25000
+[malloc_page_aligned] b5323000 - b5723000
+CORRECT
+Sending terminate message to 1 threads: 0
+Waiting for termination...
+
+hwt count: 1
+test size: 1024 mb
+test count : 2
+speed : 254.09 mb/s
+
+-------
+./performance_test.x 2 memif-w 4096K 2
+writeonly test
+memif test
+block size: 4096 kb
+test count: 2
+Creating 2 hw-threads:  0 1
+[malloc_page_aligned] b4f31000 - b5731000
+[malloc_page_aligned] b472f000 - b4f2f000
+[malloc_page_aligned] b3f2d000 - b472d000
+CORRECT
+Sending terminate message to 2 threads: 0 1
+Waiting for termination...
+
+hwt count: 2
+test size: 2048 mb
+test count : 2
+speed : 255.63 mb/s
+
+-------
+./performance_test.x 3 memif-w 4096K 2
+writeonly test
+memif test
+block size: 4096 kb
+test count: 2
+Creating 3 hw-threads:  0 1 2
+[malloc_page_aligned] b43e8000 - b4fe8000
+[malloc_page_aligned] b37e6000 - b43e6000
+[malloc_page_aligned] b2be4000 - b37e4000
+CORRECT
+Sending terminate message to 3 threads: 0 1 2
+Waiting for termination...
+
+hwt count: 3
+test size: 3072 mb
+test count : 2
+speed : 256.06 mb/s
+
+-------
+./performance_test.x 4 memif-w 4096K 2
+writeonly test
+memif test
+block size: 4096 kb
+test count: 2
+Creating 4 hw-threads:  0 1 2 3
+[malloc_page_aligned] b3716000 - b4716000
+[malloc_page_aligned] b2714000 - b3714000
+[malloc_page_aligned] b1712000 - b2712000
+CORRECT
+Sending terminate message to 4 threads: 0 1 2 3
+Waiting for termination...
+
+hwt count: 4
+test size: 4096 mb
+test count : 2
+speed : 256.52 mb/s
+
+-------
+./performance_test.x 5 memif-w 4096K 2
+writeonly test
+memif test
+block size: 4096 kb
+test count: 2
+Creating 5 hw-threads:  0 1 2 3 4
+[malloc_page_aligned] b2b25000 - b3f25000
+[malloc_page_aligned] b1723000 - b2b23000
+[malloc_page_aligned] b0321000 - b1721000
+CORRECT
+Sending terminate message to 5 threads: 0 1 2 3 4
+Waiting for termination...
+
+hwt count: 5
+test size: 5120 mb
+test count : 2
+speed : 257.10 mb/s
+
+-------
+./performance_test.x 6 memif-w 4096K 2
+writeonly test
+memif test
+block size: 4096 kb
+test count: 2
+Creating 6 hw-threads:  0 1 2 3 4 5
+[malloc_page_aligned] b1fa0000 - b37a0000
+[malloc_page_aligned] b079e000 - b1f9e000
+[malloc_page_aligned] aef9c000 - b079c000
+CORRECT
+Sending terminate message to 6 threads: 0 1 2 3 4 5
+Waiting for termination...
+
+hwt count: 6
+test size: 6144 mb
+test count : 2
+speed : 257.11 mb/s
+
+-------
+./performance_test.x 7 memif-w 4096K 2
+writeonly test
+memif test
+block size: 4096 kb
+test count: 2
+Creating 7 hw-threads:  0 1 2 3 4 5 6
+[malloc_page_aligned] b13d8000 - b2fd8000
+[malloc_page_aligned] af7d6000 - b13d6000
+[malloc_page_aligned] adbd4000 - af7d4000
+CORRECT
+Sending terminate message to 7 threads: 0 1 2 3 4 5 6
+Waiting for termination...
+
+hwt count: 7
+test size: 7168 mb
+test count : 2
+speed : 257.09 mb/s
+
+-------
+./performance_test.x 8 memif-w 4096K 2
+writeonly test
+memif test
+block size: 4096 kb
+test count: 2
+Creating 8 hw-threads:  0 1 2 3 4 5 6 7
+[malloc_page_aligned] b073a000 - b273a000
+[malloc_page_aligned] ae738000 - b0738000
+[malloc_page_aligned] ac736000 - ae736000
+CORRECT
+Sending terminate message to 8 threads: 0 1 2 3 4 5 6 7
+Waiting for termination...
+
+hwt count: 8
+test size: 8192 mb
+test count : 2
+speed : 257.09 mb/s

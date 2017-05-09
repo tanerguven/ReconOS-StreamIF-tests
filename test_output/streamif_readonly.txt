@@ -1,0 +1,142 @@
+./performance_test.x 1 streamif-r 4096K 10
+readonly test
+streamif test
+block size: 4096 kb
+test count: 10
+Creating 1 hw-threads:  0
+read : 0x14000000 - 0x14400000
+write : 0x10000000 - 0x10400000
+CORRECT
+Sending terminate message to 1 threads: 0
+Waiting for termination...
+
+hwt count: 1
+test size: 1024 mb
+test count : 10
+speed : 331.68 mb/s
+
+-------
+./performance_test.x 2 streamif-r 4096K 10
+readonly test
+streamif test
+block size: 4096 kb
+test count: 10
+Creating 2 hw-threads:  0 1
+read : 0x14000000 - 0x14800000
+write : 0x10000000 - 0x10800000
+CORRECT
+Sending terminate message to 2 threads: 0 1
+Waiting for termination...
+
+hwt count: 2
+test size: 2048 mb
+test count : 10
+speed : 650.57 mb/s
+
+-------
+root@ubuntu-armhf:/home/sandbox# ./performance_test.x 3 streamif-r 4096K 10
+readonly test
+streamif test
+block size: 4096 kb
+test count: 10
+Creating 3 hw-threads:  0 1 2
+read : 0x14000000 - 0x14c00000
+write : 0x10000000 - 0x10c00000
+CORRECT
+Sending terminate message to 3 threads: 0 1 2
+Waiting for termination...
+
+hwt count: 3
+test size: 3072 mb
+test count : 10
+speed : 969.42 mb/s
+
+-------
+./performance_test.x 4 streamif-r 4096K 10
+readonly test
+streamif test
+block size: 4096 kb
+test count: 10
+Creating 4 hw-threads:  0 1 2 3
+read : 0x14000000 - 0x15000000
+write : 0x10000000 - 0x11000000
+CORRECT
+Sending terminate message to 4 threads: 0 1 2 3
+Waiting for termination...
+
+hwt count: 4
+test size: 4096 mb
+test count : 10
+speed : 1282.69 mb/s
+
+--------
+./performance_test.x 5 streamif-r 4096K 10
+readonly test
+streamif test
+block size: 4096 kb
+test count: 10
+Creating 5 hw-threads:  0 1 2 3 4
+read : 0x14000000 - 0x15400000
+write : 0x10000000 - 0x11400000
+CORRECT
+Sending terminate message to 5 threads: 0 1 2 3 4
+Waiting for termination...
+
+hwt count: 5
+test size: 5120 mb
+test count : 10
+speed : 1608.75 mb/s
+
+---------
+./performance_test.x 6 streamif-r 4096K 10
+readonly test
+streamif test
+block size: 4096 kb
+test count: 10
+Creating 6 hw-threads:  0 1 2 3 4 5
+read : 0x14000000 - 0x15800000
+write : 0x10000000 - 0x11800000
+CORRECT
+Sending terminate message to 6 threads: 0 1 2 3 4 5
+Waiting for termination...
+
+hwt count: 6
+test size: 6144 mb
+test count : 10
+speed : 1905.71 mb/
+
+----------
+./performance_test.x 7 streamif-r 4096K 10
+readonly test
+streamif test
+block size: 4096 kb
+test count: 10
+Creating 7 hw-threads:  0 1 2 3 4 5 6
+read : 0x14000000 - 0x15c00000
+write : 0x10000000 - 0x11c00000
+CORRECT
+Sending terminate message to 7 threads: 0 1 2 3 4 5 6
+Waiting for termination...
+
+hwt count: 7
+test size: 7168 mb
+test count : 10
+speed : 2219.13 mb/s
+
+----------
+./performance_test.x 8 streamif-r 4096K 10
+readonly test
+streamif test
+block size: 4096 kb
+test count: 10
+Creating 8 hw-threads:  0 1 2 3 4 5 6 7
+read : 0x14000000 - 0x16000000
+write : 0x10000000 - 0x12000000
+CORRECT
+Sending terminate message to 8 threads: 0 1 2 3 4 5 6 7
+Waiting for termination...
+
+hwt count: 8
+test size: 8192 mb
+test count : 10
+speed : 2524.19 mb/s

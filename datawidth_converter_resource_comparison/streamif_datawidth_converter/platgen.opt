@@ -1,0 +1,11 @@
+-parallel
+yes
+-p
+xc7z020clg484-1
+-lang
+vhdl
+-intstyle
+default
+-msg
+__xps/ise/xmsgprops.lst
+system.mhs
